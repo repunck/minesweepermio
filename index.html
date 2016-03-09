@@ -2,68 +2,64 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Minesweeper test</title>
+    <title>Busca Minas examen</title>
     <link rel="stylesheet" type="text/css" href="msstyle.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   </head>
   <body>
-
-
-      <h1>Busca minas</h1>
-      <div class="contenedor"></div>
-
-      <div class="cambiaTablero">
-	<form>
-	  <table>
-	    <tr>
-	      <td colspan="2" class="headerRow">Cambia el tablero</td>
-	      <td></td>
-	      <td></td>
-	      <td></td>
-	    </tr>
-	    <a href="">X</a>
-	    <tr>
-	      <td></td>
-	      <td class="col1"></td>
-	      <td class="col2">Altura</td>
-	      <td class="col2">Ancho</td>
-	      <td class="col2">Minas</td>
-	    </tr>
-	    <tr>
-	      <td><input type="radio" id="but1" checked="checked"></input></td>
-	      <td class="col1">Principiante</td>
-	      <td class="col2">10</td>
-	      <td class="col2">10</td>
-	      <td class="col2">10</td>
-	    </tr>
-	    <tr>
-	      <td><input type="radio" id="but2"></input></td>
-	      <td>Intermedio</td>
-	      <td>20</td>
-	      <td>20</td>
-	      <td>40</td>
-	    </tr>
-	    <tr>
-	      <td><input type="radio" id="but3"></input></td>
-	      <td>Experto</td>
-	      <td>20</td>
-	      <td>40</td>
-	      <td>100</td>
-	    </tr>
-	    <tr>
-	      <td><input type="radio" id="but4"></input></td>
-	      <td>Personalizado</td>
-	      <td><input type="text" value="20" class="textBox" id="height"></input></td>
-	      <td><input type="text" value="50" class="textBox" id="width"></input></td>
-	      <td><input type="text" value="145" class="textBox" id="mines"></input></td>
-	    </tr>
-	  </table>
-	</form>
-	<button class="play">Jugar</button>
-      </div>
-
+    <h1>Busca minas</h1>
+    <div class="errores"></div>
+    <div class="contenedor"></div>
     
+    <div class="cambiaTablero">
+      <form>
+	<table>
+	  <tr>
+	    <td colspan="2" class="headerRow">Cambia el tablero</td>
+	    <td></td>
+	    <td></td>
+	    <td></td>
+	  </tr>
+	  <a href="">X</a>
+	  <tr>
+	    <td></td>
+	    <td class="col1"></td>
+	    <td class="col2">Altura</td>
+	    <td class="col2">Ancho</td>
+	    <td class="col2">Minas</td>
+	  </tr>
+	  <tr id="principiante">
+	    <td><input type="radio" id="but1" checked="checked"></input></td>
+	    <td class="col1">Principiante</td>
+	    <td class="col2">10</td>
+	    <td class="col3">10</td>
+	    <td class="col4">10</td>
+	  </tr>
+	  <tr id="intermedio">
+	    <td><input type="radio" id="but2"></input></td>
+	    <td class="col1">Intermedio</td>
+	    <td class="col2">20</td>
+	    <td class="col3">20</td>
+	    <td class="col4">40</td>
+	  </tr>
+	  <tr id="experto">
+	    <td><input type="radio" id="but3"></input></td>
+	    <td class="col1">Experto</td>
+	    <td class="col2">20</td>
+	    <td class="col3">40</td>
+	    <td class="col4">100</td>
+	  </tr>
+	  <tr id="personalizado">
+	    <td><input type="radio" id="but4"></input></td>
+	    <td>Personalizado</td>
+	    <td><input type="text" value="20" class="textBox" id="alto"></input></td>
+	    <td><input type="text" value="50" class="textBox" id="ancho"></input></td>
+	    <td><input type="text" value="145" class="textBox" id="minas"></input></td>
+	  </tr>
+	</table>
+      </form>
+      <button class="jugar">Jugar</button>
+    </div>
     <script src="mscode.js"></script>
 </body>
-  </body>
 </html>
