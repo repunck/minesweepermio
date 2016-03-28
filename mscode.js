@@ -336,10 +336,10 @@ $('document').ready(function() {
     function revelaMinas(coordx, coordy, postes, hileras, todaslasceldas){
 	for (var ce = 0; ce < todaslasceldas; ce++) {
 	    if (tablero[ce].estado === 'm') {
-		$('#'+tablero[ce].nombre).replaceWith('<div class="square reveal" id="'+tablero[ce].nombre+'"><img src="'+skull+'" class="skull"></div>');
+		$('#'+tablero[ce].nombre).replaceWith('<div class="cuadro revela" id="'+tablero[ce].nombre+'"><img src="'+skull+'" class="skull"></div>');
 	    }
 	}
-	$('#'+idCuadro(coordx, coordy)).replaceWith('<div class="square reveal mineHit" id="'+idCuadro(coordx, coordy)+'"><img src="'+skull+'" class="skull"></div>');
+	$('#'+idCuadro(coordx, coordy)).replaceWith('<div class="cuadro revela mineHit" id="'+idCuadro(coordx, coordy)+'"><img src="'+skull+'" class="skull"></div>');
     }
 
     /**
@@ -508,8 +508,8 @@ $('document').ready(function() {
 	numCeldas = med2 * med1;
 	botPres = check;
 
-	var ancho = (med1 * 40).toString();
-	var alto = (med2 * 40).toString();
+	var ancho = (med1 * 30).toString();
+	var alto = (med2 * 30).toString();
 	contenedor.css({"width": ancho+"px", "height": alto+"px"});
 	// desplegamos tablero, insertamos minas, marcamos cuadros adyacentes y establecemos los que estan vacios
 	desplegar(med1, med2, function(pintaceldas){
